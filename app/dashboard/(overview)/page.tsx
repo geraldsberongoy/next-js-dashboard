@@ -4,11 +4,16 @@ import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
 import { lusitana } from "@/app/ui/fonts";
 import { fetchCardData } from "../../lib/data";
 import { Suspense } from "react";
+import { Metadata } from 'next';
 import {
   RevenueChartSkeleton,
   InvoiceSkeleton,
   CardsSkeleton,
 } from "@/app/ui/skeletons";
+
+export const metadata: Metadata = {
+  title: 'Dashboard - Acme',
+};
 
 export default async function Page() {
   const {
